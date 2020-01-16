@@ -1,26 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
+import RepoList from './RepoList';
+import IssueList from './IssueList';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export default class App extends React.Component {
 
-export default App;
+  state = {
+    class: 'single',
+    issueListClass: 'hidden'
+  }
+
+  changeClassName = (className, issueListClassName) => {
+    this.setState({
+      class: className,
+      issueListClass: issueListClassName
+    })
+  }
+
+  handleClick = () => {
+    this.setState(prevState=>{
+      let toggleState = prevState.class === 'double' ? 'reverse-double' : 'double'
+      console.log('what is prevState', prevState, toggleState)
+      return {class: toggleState}
+    })
+  }
+
+  render(){
+   return(
+     <div className={this.state.class}>
+       <div className='gutter-left' onClick={this.handleClick}><p>{'<'}</p></div>
+       <RepoList addColumn={this.changeClassName}/>
+       <IssueList issueListClass={this.state.issueListClass}/>
+       <div className='gutter-right' onClick={this.handleClick}><p>{'>'}</p></div>
+     </div>
+   )
+  }
+
+}
