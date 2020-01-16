@@ -21,7 +21,6 @@ export default class App extends React.Component {
   handleClick = () => {
     this.setState(prevState=>{
       let toggleState = prevState.class === 'double' ? 'reverse-double' : 'double'
-      console.log('what is prevState', prevState, toggleState)
       return {class: toggleState}
     })
   }
