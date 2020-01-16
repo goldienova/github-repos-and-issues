@@ -7,7 +7,7 @@ From the terminal:
 ### `npm start`
 Navigate to [http://localhost:3000](http://localhost:3000) to view in your browser of choice.
 
-# To Run Project Build For Production
+## To Run Project Build For Production
 From the terminal:
 ### `npm run build`
 
@@ -20,7 +20,6 @@ From terminal:
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
 
 ## Additional Project TODOS
 
