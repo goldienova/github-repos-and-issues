@@ -1,5 +1,7 @@
 ## To Download This Project
-Clone project and locally and from the terminal run:
+Clone project and locally from the terminal run:
+
+###  `npm clone https://github.com/goldienova/github-repos-and-issues.git`
 ### `npm install`
 
 ## To Run This Project
