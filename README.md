@@ -24,7 +24,7 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 ## Additional Project TODOS
 
--- add error handling for a bad request
--- encrypt api key when adding to redux store
--- add more tests to project
--- add styleComponents
+* add error handling for a bad request
+* encrypt api key when adding to redux store
+* add more tests to project
+* add styleComponents
