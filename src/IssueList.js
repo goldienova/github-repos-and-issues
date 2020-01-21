@@ -23,7 +23,7 @@ function IssueList (props) {
   }
 
   let {mappedIssuesToRepos} = props
-  let issueList = mappedIssuesToRepos[props.selectedRepo] || []
+  let issueList = mappedIssuesToRepos[props.selectedRepo] || {}
 
   let issueCount = Object.keys(issueList).length
 
@@ -35,9 +35,7 @@ function IssueList (props) {
           }): <p>No Issues For this Repo</p>
         }
     </div>
-
   )
-
 }
 
 
